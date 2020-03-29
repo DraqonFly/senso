@@ -14,8 +14,12 @@
 </head>
 
 <body>
-    <h1>Hello World</h1> 
-    
+    <h1> Senso </h1> 
+
+    <div id="GreenLight" class="light" />
+    <div id="RedLight" class="light" />
+    <div id="BlueLight" class="light" />
+
     <!-- Imports Scripts -->
     <% htmlWebpackPlugin.files.js.forEach(function(file){ %>
         <script src="<%- file %>"></script>
