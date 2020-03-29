@@ -1,1 +1,1 @@
-# Senso
+# Webpack-Boilerplate
