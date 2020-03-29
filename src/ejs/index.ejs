@@ -15,10 +15,14 @@
 
 <body>
     <h1> Senso </h1> 
+    <button onclick="start()"> Start Game </button>
 
-    <div id="GreenLight" class="light" />
-    <div id="RedLight" class="light" />
-    <div id="BlueLight" class="light" />
+    <main>
+        <div onclick="onClick('GreenLight', 0)" id="GreenLight" class="light" />
+        <div onclick="onClick('RedLight', 1)" id="RedLight" class="light" />
+        <div onclick="onClick('BlueLight', 2)" id="BlueLight" class="light" />
+    </main>
+    <p class="turn"> Its not your turn! </p>
 
     <!-- Imports Scripts -->
     <% htmlWebpackPlugin.files.js.forEach(function(file){ %>

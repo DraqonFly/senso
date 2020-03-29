@@ -30,5 +30,9 @@ export class Light
         window.setTimeout( this.updateToggle, this.durationInMS)        
     }
 
+    onClick = () => {
+        console.log("clicked light "+this.name)
+    }
+
     toString = () => console.log(JSON.parse(JSON.stringify(this)));
 }

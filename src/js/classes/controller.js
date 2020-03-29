@@ -34,15 +34,20 @@ class Controller
             console.log("shine")
             let lightID = this.blinkOrder[loops];
 
-            this.lights[lightID].blink();
-
+            if(this.lights[lightID]) {
+                this.lights[lightID].blink();
+            }
             loops++;
             if(loops === this.blinkOrder.length) {
-                window.clearInterval(this.interval)
+                window.setTimeout(() => {
+                    document.getElementsByClassName("turn")[0].innerHTML = "Its your turn !";
+                    document.getElementsByClassName("turn")[0].style.color = "rgb(175, 255, 175)";
+                    window.clearInterval(this.interval)
+                }, 2000)
+
             }
         }, 2000)
     }
-
     createRandomInteger = (maxLightCount) => Math.floor(Math.random() * (maxLightCount - 1 + 1 ));
 
     toString = () => JSON.parse(JSON.stringify(this))
