@@ -4,6 +4,8 @@ class Controller
     blinkDuration;
     blinkOrderLength = 5;
     lights;
+    record;
+    recordCount = 0;
 
     constructor(initialBlinkDuration)
     {
@@ -40,8 +42,10 @@ class Controller
             loops++;
             if(loops === this.blinkOrder.length) {
                 window.setTimeout(() => {
-                    document.getElementsByClassName("turn")[0].innerHTML = "Its your turn !";
+                    document.getElementsByClassName("turn")[0].innerHTML = "Its your turn now!";
                     document.getElementsByClassName("turn")[0].style.color = "rgb(175, 255, 175)";
+                    console.log(this.blinkOrder)
+                    this.record = true;
                     window.clearInterval(this.interval)
                 }, 2000)
 

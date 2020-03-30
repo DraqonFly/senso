@@ -22,7 +22,14 @@
         <div onclick="onClick('RedLight', 1)" id="RedLight" class="light" />
         <div onclick="onClick('BlueLight', 2)" id="BlueLight" class="light" />
     </main>
+
     <p class="turn"> Its not your turn! </p>
+
+    <div class="healthbar">
+        <div class="health health__bar1" ></div>
+        <div class="health health__bar2" ></div>
+        <div class="health health__bar3" ></div>
+    </div>
 
     <!-- Imports Scripts -->
     <% htmlWebpackPlugin.files.js.forEach(function(file){ %>
