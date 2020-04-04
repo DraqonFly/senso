@@ -1,0 +1,25 @@
+.light {
+    height: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+.GreenLight, .RedLight, .BlueLight, .YellowLight, .OrangeLight, .SilverLight, .LightOrange, .LightBlue, .LightGreen, .LightRed {
+    display: inline-block;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.YellowLight, .OrangeLight, .SilverLight, .LightOrange, .LightBlue, .LightGreen, .LightRed {
+    display: none;
+}
+
+main {
+    text-align: center;
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+}

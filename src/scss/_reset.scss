@@ -1,3 +1,26 @@
+html, body, p, h1, h2, h3, h4, h5, h6, article, section, form, caption, figcaption, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
 button {
     outline: none;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    cursor: default;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vH;
+    width: 100vW;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    max-width: 640px;
+    margin: auto;
 }

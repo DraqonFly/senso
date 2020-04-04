@@ -7,22 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Webpack Boilerplate </title>
 
-    <!-- Imports Stylesheets -->
-    <% htmlWebpackPlugin.files.css.forEach(function(file){ %>
-        <link href="<%- file %>" rel="stylesheet">
-    <% }); %>
+    <% htmlWebpackPlugin.files.css.forEach(function(file){ %> <link href="<%- file %>" rel="stylesheet"> <% }); %>
 </head>
 
 <body>
-    <h1> Senso </h1> 
-    <button onclick="start()"> Start Game </button>
-
+    <header class="header">
+        <h1> Senso </h1> 
+        <h2 class="header__level"> lvl-1 </h2>
+        <button onclick="start()"> Start Game </button>
+    </header>
+    
     <main>
-        <div onclick="onClick('GreenLight', 0)" id="GreenLight" class="light" />
-        <div onclick="onClick('RedLight', 1)" id="RedLight" class="light" />
-        <div onclick="onClick('BlueLight', 2)" id="BlueLight" class="light" />
+        <div class="lightouter GreenLight"> <div onclick="onClick('GreenLight', 0)" id="GreenLight" class="light" ></div> </div>
+        <div class="lightouter RedLight"> <div onclick="onClick('RedLight', 1)" id="RedLight" class="light" ></div> </div>
+        <div class="lightouter BlueLight"> <div onclick="onClick('BlueLight', 2)" id="BlueLight" class="light" ></div> </div>
+        <div class="lightouter YellowLight"> <div onclick="onClick('YellowLight', 3)" id="YellowLight" class="light" ></div> </div>
+        <div class="lightouter OrangeLight"> <div onclick="onClick('OrangeLight', 4)" id="OrangeLight" class="light" ></div> </div>
+        <div class="lightouter SilverLight"> <div onclick="onClick('SilverLight', 5)" id="SilverLight" class="light" ></div> </div>
+        <div class="lightouter LightOrange"> <div onclick="onClick('LightOrange', 6)" id="LightOrange" class="light" ></div> </div>
+        <div class="lightouter LightBlue"> <div onclick="onClick('LightBlue', 7)" id="LightBlue" class="light" ></div> </div>
+        <div class="lightouter LightGreen"> <div onclick="onClick('LightGreen', 8)" id="LightGreen" class="light" ></div> </div>
+        <div class="lightouter LightRed"> <div onclick="onClick('LightRed', 9)" id="LightRed" class="light" ></div> </div>
     </main>
-
     <p class="turn"> Its not your turn! </p>
 
     <div class="healthbar">
@@ -30,11 +36,8 @@
         <div class="health health__bar2" ></div>
         <div class="health health__bar3" ></div>
     </div>
-
-    <!-- Imports Scripts -->
-    <% htmlWebpackPlugin.files.js.forEach(function(file){ %>
-        <script src="<%- file %>"></script>
-    <% }); %>
+    
+    <% htmlWebpackPlugin.files.js.forEach(function(file){ %> <script src="<%- file %>"></script> <% }); %>
 </body>
 
 </html>
